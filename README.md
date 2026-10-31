@@ -26,13 +26,16 @@ To try the Connect flow on a sample database first, use [`AntelopeJS/template-dm
 
 In the Builder, choose **Page** to build a page with clicks. The Builder writes what you build as TypeScript in this repository, which you can edit and commit.
 
-The AI assistant runs Claude Code inside the container with your credentials. Add one of these to a `.env` file next to `compose.yaml` before `docker compose up`:
+The AI assistant runs a coding agent inside the container: Claude Code or Codex. You don't need an API key. Use the subscription you already have:
 
-```bash
-ANTHROPIC_API_KEY=sk-ant-...
-# or a token from `claude setup-token`
-CLAUDE_CODE_OAUTH_TOKEN=sk-ant-oat01-...
-```
+- **Claude Code with your Claude subscription.** On your machine, run `claude setup-token` and put the token in a `.env` file next to `compose.yaml` before `docker compose up`:
+
+  ```bash
+  CLAUDE_CODE_OAUTH_TOKEN=sk-ant-oat01-...
+  ```
+
+- **Codex with your ChatGPT plan.** Open **Assistant** > **Settings** in the dashboard and press **Sign in with ChatGPT**.
+- **An Anthropic API key**, if you prefer one: put `ANTHROPIC_API_KEY=sk-ant-...` in the same `.env` file.
 
 ## Documentation
 
