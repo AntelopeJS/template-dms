@@ -38,7 +38,7 @@ CLAUDE_CODE_OAUTH_TOKEN=sk-ant-oat01-...
 
 - [DMS documentation](https://dms.antelopejs.com/docs)
 - [AntelopeJS framework](https://github.com/AntelopeJS/antelopejs)
-- [Discord](https://discord.gg/sjK28QHrA7)
+- [Discord](https://discord.gg/g4pFt6eXqu)
 
 ## Licence
 
