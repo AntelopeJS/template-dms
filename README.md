@@ -4,15 +4,16 @@ The starting point for your own project with [AntelopeJS DMS](https://github.com
 
 ## Run with Docker
 
-You need Docker with Compose v2 and git.
+You need git, Node.js 24, pnpm, and Docker with Compose v2. Node.js 24 includes corepack, and `corepack enable` makes the `pnpm` command available. The command that creates the project installs its packages with pnpm.
 
 ```bash
-git clone https://github.com/AntelopeJS/template-dms.git my-project
+corepack enable
+npx @antelopejs/core project init my-project --template dms-starter
 cd my-project
 docker compose up
 ```
 
-Open [http://localhost:3001](http://localhost:3001) when the log prints `Local: http://localhost:3001/`, then create the administrator account. The DMS keeps its own data in the MongoDB that `compose.yaml` starts.
+When the log prints `Local: http://localhost:3001/`, open the onboarding address from the `dms` log and create the administrator account. See [First run](#first-run). The DMS keeps its own data in the MongoDB that `compose.yaml` starts.
 
 ## Run without Docker
 
@@ -21,13 +22,12 @@ You need git, Node.js 24, pnpm 10.2.0, and a MongoDB server. The DMS keeps its o
 - Node.js 24 is the version in `.nvmrc`.
 - pnpm 10.2.0 is the version that `packageManager` in `package.json` pins. Node.js 24 includes corepack, and `corepack enable` makes the `pnpm` command use that version.
 
-Clone the project and install it:
+Create the project. The command installs its packages:
 
 ```bash
-git clone https://github.com/AntelopeJS/template-dms.git my-project
-cd my-project
 corepack enable
-pnpm install
+npx @antelopejs/core project init my-project --template dms-starter
+cd my-project
 ```
 
 If you have no MongoDB on `localhost:27017`, start one. This is the only container you need:
@@ -50,7 +50,17 @@ Wait until the log prints `Constructed modules`. In the second terminal, start t
 pnpm frontend:dev
 ```
 
-Open [http://localhost:3001](http://localhost:3001) when the log prints `Local: http://localhost:3001/`, then create the administrator account. Press `Ctrl` `C` in each terminal to stop. Your data stays in MongoDB.
+When the log prints `Local: http://localhost:3001/`, open the onboarding address from the `pnpm dev` terminal and create the administrator account. See [First run](#first-run). Press `Ctrl` `C` in each terminal to stop. Your data stays in MongoDB.
+
+## First run
+
+There are no default credentials. When no administrator exists, the backend prints the address of the setup wizard at start. With Docker, it is in the `dms` log. Without Docker, it is in the `pnpm dev` terminal:
+
+```
+[DMS] No owner exists yet. To create it, open http://localhost:3001/onboarding?token=...
+```
+
+Open that address and create the administrator account. The wizard reads the setup token from the address. If you set `DMS_SETUP_TOKEN`, the log shows `<DMS_SETUP_TOKEN>` in place of the token, and you use your own value.
 
 ## AI assistant
 
