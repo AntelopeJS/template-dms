@@ -4,10 +4,9 @@ The starting point for your own project with [AntelopeJS DMS](https://github.com
 
 ## Run with Docker
 
-You need git, Node.js 24, pnpm, and Docker with Compose v2. Node.js 24 includes corepack, and `corepack enable` makes the `pnpm` command available. The command that creates the project installs its packages with pnpm.
+You need git, Node.js 24, and Docker with Compose v2.
 
 ```bash
-corepack enable
 npx @antelopejs/core project init my-project --template dms-starter
 cd my-project
 docker compose up
