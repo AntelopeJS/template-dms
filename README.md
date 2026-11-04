@@ -1,4 +1,19 @@
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AntelopeJS/dms/main/packages/dms/frontend-vue/layers/dms-layout/public/images/antelope-logo/dark.svg">
+  <img alt="AntelopeJS DMS" src="https://raw.githubusercontent.com/AntelopeJS/dms/main/packages/dms/frontend-vue/layers/dms-layout/public/images/antelope-logo/light.svg" height="72">
+</picture>
+
 # AntelopeJS DMS template
+
+**Start your own back office on your PostgreSQL, MongoDB or RethinkDB database, with the Builder and the AI assistant.**
+
+[DMS](https://github.com/AntelopeJS/dms) · [Docs](https://dms.antelopejs.com/docs) · [Quick start](https://dms.antelopejs.com/docs/getting-started/quickstart) · [Discord](https://discord.gg/g4pFt6eXqu)
+
+</div>
+
+![Screen recording from the Meet AntelopeJS DMS film. A PostgreSQL connection string is pasted into the Connect a database form and Connect is pressed. Three databases appear in one list under the caption Three databases, one back office, then an Overview dashboard with data from all three appears under the caption One dashboard. Everything in one place.](https://raw.githubusercontent.com/AntelopeJS/dms/main/docs/media/hero-connect.gif)
 
 The starting point for your own project with [AntelopeJS DMS](https://github.com/AntelopeJS/dms). It runs the DMS with the Builder and the AI assistant, and nothing else: no sample data, no demo application, no seeded database.
 
