@@ -9,7 +9,7 @@
     "frontend:dev": "ajs dms dev",
     "suppressions": "antelopejs-suppressions",
     "suppressions:update": "antelopejs-suppressions --update",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.config.json --noEmit",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "format": "oxfmt .",
