@@ -18,12 +18,13 @@ export default defineConfig({
 
     dms: {
       source: {
-        type: "package",
-        package: "@antelopejs/dms",
-        version: ">=0.19.4 <1.0.0",
+        type: "local",
+        path: "node_modules/@antelopejs/dms",
       },
       config: {
         apiBaseUrl: "${@api.API_PUBLIC_BASE_URL}",
+        mcp: { backendUrl: "${@api.API_LOCAL_BASE_URL}" },
+        builder: { projectRoot: __dirname },
         homepage: "/home",
         meta: {
           title: "AntelopeJS DMS",
@@ -37,21 +38,10 @@ export default defineConfig({
         },
       },
     },
-    "dms-builder": {
+    "dms-assistant": {
       source: {
-        type: "package",
-        package: "@antelopejs/dms-builder",
-        version: ">=0.10.3 <1.0.0",
-      },
-      config: {
-        projectRoot: __dirname,
-      },
-    },
-    "dms-ai": {
-      source: {
-        type: "package",
-        package: "@antelopejs/dms-ai",
-        version: ">=0.10.2 <1.0.0",
+        type: "local",
+        path: "node_modules/@antelopejs/dms-assistant",
       },
       config: {
         backendUrl: "${@api.API_LOCAL_BASE_URL}",
@@ -62,7 +52,7 @@ export default defineConfig({
       source: {
         type: "package",
         package: "@antelopejs/mongodb",
-        version: "^1.7.0",
+        version: "~1.7.0",
       },
       config: {
         url: "mongodb://localhost:27017",

@@ -6,6 +6,13 @@ export default antelopeKnipConfig({
    * and nothing imports the class itself, so without it the page reads as a dead export.
    */
   entry: ["antelope.config.ts", "src/home.ts"],
-  /** The DMS assistant runs the `codex` binary from this project's `node_modules`; no source file imports it. */
-  ignoreDependencies: ["@openai/codex"],
+  /**
+   * The DMS assistant runs the `codex` binary from this project's `node_modules`, and `antelope.config.ts`
+   * loads `@antelopejs/dms` and `@antelopejs/dms-assistant` from there by path; no source file imports them.
+   */
+  ignoreDependencies: [
+    "@openai/codex",
+    "@antelopejs/dms",
+    "@antelopejs/dms-assistant",
+  ],
 });

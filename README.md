@@ -59,21 +59,9 @@ When the mockup is right, press **Build it**. The assistant writes the pages as 
 
 The assistant in the dashboard runs a coding agent in this project's folder, Claude Code or Codex, on your own subscription. Open the chat with the sparkle icon in the header, or press `Ctrl` `Shift` `K`. Its settings are under **Modules** > **Assistant**.
 
-**Without Docker.** The assistant runs as you, on your machine, so it uses the logins you already have. You set no token and no API key.
+You set it up in the dashboard. After you create the administrator account, the assistant's onboarding opens on its own. It finds a Claude Code login you already have, or walks you through signing in to Claude or Codex, with Docker too.
 
-- **Claude Code.** If you are signed in to Claude Code on this machine, the assistant uses that login. If you are not, run `claude` once and sign in. The assistant runs the copy of Claude Code that `@antelopejs/dms-ai` installs, so it needs no `claude` on your `PATH`.
-- **Codex.** This project has `@openai/codex` 0.154.0 as a dependency, so you install nothing more. The assistant does not read a `codex login` from your terminal. Open **Assistant** > **Settings** and press **Sign in with ChatGPT** once. The sign-in is stored in `~/.config/dms-ai` and serves every DMS project on your machine.
-
-**With Docker.** The assistant runs inside the container, which has none of your logins. Give the container one of these before `docker compose up`:
-
-- **Claude Code with your Claude subscription.** On your machine, run `claude setup-token` and put the token in a `.env` file next to `compose.yaml`:
-
-  ```bash
-  CLAUDE_CODE_OAUTH_TOKEN=sk-ant-oat01-...
-  ```
-
-- **Codex with your ChatGPT plan.** Open **Assistant** > **Settings** and press **Sign in with ChatGPT**. The page that OpenAI sends you back to does not load, because the assistant is in the container. Copy its address from the address bar and press **Paste the return address**.
-- **An Anthropic API key**, if you prefer one. Put `ANTHROPIC_API_KEY=sk-ant-...` in the same `.env` file.
+To skip that step in Docker, put `CLAUDE_CODE_OAUTH_TOKEN=<the output of claude setup-token>` in a `.env` file next to `compose.yaml`.
 
 <a href="https://github.com/AntelopeJS/dms"><img data-illustration src="./.github/readme/star-strip.svg" width="100%" alt="A star helps other developers find AntelopeJS DMS."></a>
 
@@ -84,10 +72,10 @@ The assistant in the dashboard runs a coding agent in this project's folder, Cla
 
 ### Run without Docker
 
-You need git, Node.js 24, pnpm 10.2.0, and a MongoDB server. The DMS keeps its own data in that MongoDB.
+You need git, Node.js 24, pnpm 10.33.0, and a MongoDB server. The DMS keeps its own data in that MongoDB.
 
 - Node.js 24 is the version in `.nvmrc`.
-- pnpm 10.2.0 is the version that `packageManager` in `package.json` pins. Node.js 24 includes corepack, and `corepack enable` makes the `pnpm` command use that version.
+- pnpm 10.33.0 is the version that `packageManager` in `package.json` pins. Node.js 24 includes corepack, and `corepack enable` makes the `pnpm` command use that version.
 
 Create the project. The command installs its packages:
 

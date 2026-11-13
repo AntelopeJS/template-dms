@@ -1,0 +1,14 @@
+@antelopejs/dms	package.json	devDependencies	>=0.19.4 <1.0.0
+@antelopejs/dms	package.json	pnpm.overrides	
+@antelopejs/dms>@antelopejs/interface-api	package.json	pnpm.overrides	
+@antelopejs/dms>@antelopejs/interface-core	package.json	pnpm.overrides	
+@antelopejs/dms>@antelopejs/interface-data-api	package.json	pnpm.overrides	
+@antelopejs/dms>@antelopejs/interface-database	package.json	pnpm.overrides	
+@antelopejs/dms>@antelopejs/interface-database-decorators	package.json	pnpm.overrides	
+@antelopejs/dms-assistant	package.json	devDependencies	>=0.1.0 <1.0.0
+@antelopejs/dms-assistant	package.json	pnpm.overrides	
+@antelopejs/dms-assistant>@antelopejs/interface-api	package.json	pnpm.overrides	
+@antelopejs/dms-assistant>@antelopejs/interface-core	package.json	pnpm.overrides	
+@antelopejs/dms-assistant>@antelopejs/interface-database	package.json	pnpm.overrides	
+@antelopejs/interface-dms	package.json	dependencies	>=0.13.2 <1.0.0
+@antelopejs/interface-dms	package.json	pnpm.overrides	
