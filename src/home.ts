@@ -18,6 +18,6 @@ export class PageHome extends PageController("home", {
     icon: "i-ph-plugs-connected",
     title: "Start here",
     description:
-      "Open the Builder (hammer icon, top right). Choose Database to connect your own database, or Page to build a page.",
+      "Open the assistant from the widget at the bottom left. Choose Start from an existing database to connect your own database, or describe the pages you need.",
   });
 }
