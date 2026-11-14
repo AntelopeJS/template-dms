@@ -63,6 +63,8 @@ You set it up in the dashboard. After you create the administrator account, the 
 
 To skip that step in Docker, put `CLAUDE_CODE_OAUTH_TOKEN=<the output of claude setup-token>` in a `.env` file next to `compose.yaml`.
 
+The first start in development also writes `.mcp.json` and `.codex/config.toml`, so Claude Code and Codex sessions you open in the project reach the same DMS tools. Commit both files. They hold only a relative path to a launcher under `node_modules`, with no machine path and no secret. [MCP server](https://dms.antelopejs.com/docs/ai-and-claude-code/mcp-server) explains them.
+
 <a href="https://github.com/AntelopeJS/dms"><img data-illustration src="./.github/readme/star-strip.svg" width="100%" alt="A star helps other developers find AntelopeJS DMS."></a>
 
 ## More
