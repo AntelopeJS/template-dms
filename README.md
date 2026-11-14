@@ -40,7 +40,7 @@ Open that address and create the administrator account. The wizard reads the set
 
 ## Connect your own database
 
-On **Home**, open the Builder with the hammer icon at the top right, choose **Database**, and press **Connect a database**. Paste a PostgreSQL, MongoDB, or RethinkDB connection string. The Builder generates a TypeScript page for each table you map, in this repository.
+In the assistant's onboarding popup, choose **Start from an existing database** and paste a PostgreSQL, MongoDB, or RethinkDB connection URL. The URL is saved in this project's `.env`. Access is **Read only** by default: the DMS reads the schema and the rows and writes nothing. Choose **Read and write** only if you want to edit rows from the DMS. After the analysis, untick the tables you don't need, then choose **Generate a first mockup** or **Build directly**. The assistant writes a TypeScript page for each table you keep, in this repository.
 
 Without Docker, use `localhost` as the host of a database on your machine. With Docker, the DMS runs in a container. Use `host.docker.internal` as the host to reach a database on your machine. To reach a database in another container, put it on the same Compose network and use its service name.
 
@@ -48,7 +48,12 @@ To try the Connect flow on a sample database first, use [`AntelopeJS/template-dm
 
 ## Build pages
 
-In the Builder, choose **Page** to build a page with clicks. The Builder writes what you build as TypeScript in this repository, which you can edit and commit.
+Pages start as a mockup. Describe what you need to the assistant, or choose **Start from scratch** in the onboarding popup, and the assistant drafts a mockup of real DMS blocks. To rework a page that already exists, press **Edit as mockup**, the pencil in the dashboard header. The mockup has two modes:
+
+- **Comment** mode. Click a block to leave a note on it for the assistant.
+- **Edit** mode. Add blocks from the catalog, move, duplicate, delete, and restyle them, and edit texts and pages in place.
+
+When the mockup is right, press **Build it**. The assistant writes the pages as TypeScript in this repository, which you can edit and commit.
 
 ## AI assistant
 
