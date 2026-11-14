@@ -18,8 +18,9 @@ export default defineConfig({
 
     dms: {
       source: {
-        type: "local",
-        path: "node_modules/@antelopejs/dms",
+        type: "package",
+        package: "@antelopejs/dms",
+        version: "^0.20.0",
       },
       config: {
         apiBaseUrl: "${@api.API_PUBLIC_BASE_URL}",
@@ -40,8 +41,9 @@ export default defineConfig({
     },
     "dms-assistant": {
       source: {
-        type: "local",
-        path: "node_modules/@antelopejs/dms-assistant",
+        type: "package",
+        package: "@antelopejs/dms-assistant",
+        version: "^0.1.0",
       },
       config: {
         backendUrl: "${@api.API_LOCAL_BASE_URL}",
@@ -52,7 +54,7 @@ export default defineConfig({
       source: {
         type: "package",
         package: "@antelopejs/mongodb",
-        version: "~1.7.0",
+        version: "^1.8.1",
       },
       config: {
         url: "mongodb://localhost:27017",

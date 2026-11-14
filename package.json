@@ -22,20 +22,18 @@
     "sync:check": "antelopejs-sync --check --profile template"
   },
   "dependencies": {
-    "@antelopejs/interface-api": ">=0.3.2 <1.0.0",
-    "@antelopejs/interface-core": ">=0.4.1 <1.0.0",
-    "@antelopejs/interface-data-api": ">=0.6.3 <1.0.0",
-    "@antelopejs/interface-database": ">=0.3.2 <1.0.0",
-    "@antelopejs/interface-database-decorators": ">=0.4.0 <1.0.0",
-    "@antelopejs/interface-dms": "file:.tgz-deps/antelopejs-interface-dms-41d2eb4.tgz",
+    "@antelopejs/interface-api": ">=0.3.3 <0.4.0",
+    "@antelopejs/interface-core": ">=0.5.1 <0.6.0",
+    "@antelopejs/interface-data-api": ">=0.8.0 <0.9.0",
+    "@antelopejs/interface-database": ">=0.4.0 <0.5.0",
+    "@antelopejs/interface-database-decorators": ">=0.5.2 <0.6.0",
+    "@antelopejs/interface-dms": ">=0.14.0 <0.15.0",
     "@openai/codex": "0.166.0"
   },
   "devDependencies": {
-    "@antelopejs/core": "1.21.3",
-    "@antelopejs/dms": "file:.tgz-deps/antelopejs-dms-41d2eb4.tgz",
-    "@antelopejs/dms-assistant": "file:.tgz-deps/antelopejs-dms-assistant-cfc2c36.tgz",
-    "@antelopejs/dms-frontend": ">=0.10.3 <1.0.0",
-    "@antelopejs/tooling-configs": "^0.5.8",
+    "@antelopejs/core": "~1.23.3",
+    "@antelopejs/dms-frontend": ">=0.11.1 <0.12.0",
+    "@antelopejs/tooling-configs": "^0.7.1",
     "@types/node": "^24.0.0",
     "knip": "^6.34.0",
     "oxfmt": "^0.66.0",
@@ -45,21 +43,6 @@
     "typescript": "^6.0.3"
   },
   "packageManager": "pnpm@10.33.0",
-  "pnpm": {
-    "overrides": {
-      "@antelopejs/dms": "file:.tgz-deps/antelopejs-dms-41d2eb4.tgz",
-      "@antelopejs/dms>@antelopejs/interface-api": "0.3.2",
-      "@antelopejs/dms>@antelopejs/interface-core": "0.4.1",
-      "@antelopejs/dms>@antelopejs/interface-data-api": "0.6.3",
-      "@antelopejs/dms>@antelopejs/interface-database": "0.3.2",
-      "@antelopejs/dms>@antelopejs/interface-database-decorators": "0.4.0",
-      "@antelopejs/dms-assistant": "file:.tgz-deps/antelopejs-dms-assistant-cfc2c36.tgz",
-      "@antelopejs/dms-assistant>@antelopejs/interface-api": "0.3.2",
-      "@antelopejs/dms-assistant>@antelopejs/interface-core": "0.4.1",
-      "@antelopejs/dms-assistant>@antelopejs/interface-database": "0.3.2",
-      "@antelopejs/interface-dms": "file:.tgz-deps/antelopejs-interface-dms-41d2eb4.tgz"
-    }
-  },
   "antelopeJs": {
     "baseUrl": "dist",
     "paths": {
