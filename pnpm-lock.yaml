@@ -31,11 +31,11 @@ importers:
         version: 0.166.0
     devDependencies:
       '@antelopejs/core':
-        specifier: ~1.23.3
-        version: 1.23.3
+        specifier: ~1.24.0
+        version: 1.24.0
       '@antelopejs/dms-frontend':
-        specifier: '>=0.11.3 <0.12.0'
-        version: 0.11.3(@antelopejs/core@1.23.3)
+        specifier: '>=0.11.4 <0.12.0'
+        version: 0.11.4(@antelopejs/core@1.24.0)
       '@antelopejs/tooling-configs':
         specifier: '>=0.7.3 <0.8.0'
         version: 0.7.3(knip@6.44.1)(oxfmt@0.66.0)(oxlint@1.81.0(oxlint-tsgolint@7.0.2006))(playwright-core@1.65.0)
@@ -63,17 +63,17 @@ importers:
 
 packages:
 
-  '@antelopejs/core@1.23.3':
-    resolution: {integrity: sha512-W9ekdNXaZCuK4lsKn5bBF3F+LoQhvwlmLoprw4m0W6jdS0DA6Bb7B2+2ttgla0oggAJwyFUxHcpBVloFnlv91w==}
+  '@antelopejs/core@1.24.0':
+    resolution: {integrity: sha512-lYw0iwu8pMohkWvU+aRTHRsZvRi2YXph+ALF3lwCyjilxeXlMxoCDwHroGP3iWXrAhqK8G/8iTloOz/b0WGUKw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
-  '@antelopejs/dms-frontend@0.11.3':
-    resolution: {integrity: sha512-z/AXIA73vXxqaZntk2siV/kVqfLRK74n/lQeKx4jnDG04UJi+jWWVqmoxnRTfnXnb0WWG1ewTXxLWZqM3QyJYQ==}
+  '@antelopejs/dms-frontend@0.11.4':
+    resolution: {integrity: sha512-/YD6LapIXKonGsyiru+zuI1kFvLlh+KwhPW41SxowYmPPMP9DyYg+n5jSKEx+ht3P3BPixPVr79VTguZCjJAAg==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     peerDependencies:
-      '@antelopejs/core': ~1.23.1
+      '@antelopejs/core': ~1.24.0
 
   '@antelopejs/interface-api-util@0.3.2':
     resolution: {integrity: sha512-bNzujj2Jf9VM+XYSO0QcrD3SUmOk5TcWncGioCWnlWnfGvuPgeWE8T58+SMYyfzmPalQQa0JUed/+6k+e59lZw==}
@@ -1458,7 +1458,7 @@ packages:
 
 snapshots:
 
-  '@antelopejs/core@1.23.3':
+  '@antelopejs/core@1.24.0':
     dependencies:
       '@antelopejs/interface-core': 0.5.1
       '@clack/prompts': 1.8.1
@@ -1473,9 +1473,9 @@ snapshots:
       semver: 7.8.5
       typescript: 5.9.3
 
-  '@antelopejs/dms-frontend@0.11.3(@antelopejs/core@1.23.3)':
+  '@antelopejs/dms-frontend@0.11.4(@antelopejs/core@1.24.0)':
     dependencies:
-      '@antelopejs/core': 1.23.3
+      '@antelopejs/core': 1.24.0
       '@intlify/message-compiler': 11.4.16
       chokidar: 4.0.3
       commander: 13.1.0
