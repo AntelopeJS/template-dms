@@ -16,6 +16,7 @@ services:
     volumes:
       - .:/app
       - node_modules:/app/node_modules
+      - antelope:/app/.antelope
       - home:/home/node
     depends_on:
       mongo:
@@ -34,5 +35,6 @@ services:
 
 volumes:
   node_modules:
+  antelope:
   home:
   mongo:

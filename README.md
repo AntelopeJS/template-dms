@@ -26,7 +26,7 @@ cd my-project
 docker compose up
 ```
 
-When the log prints `Local: http://localhost:3001/`, open the onboarding address from the `dms` log and create the administrator account. See [First run](#first-run). The DMS keeps its own data in the MongoDB that `compose.yaml` starts.
+When the log prints `Local: http://localhost:3001/`, open the onboarding address from the `dms` log and create the administrator account. See [First run](#first-run). The DMS keeps its own data in the MongoDB that `compose.yaml` starts. The project's `.antelope` build folder lives in a named Docker volume, so `docker compose up` works for any user id on Linux: the container no longer writes it into your project folder.
 
 ## First run
 
