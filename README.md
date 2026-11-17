@@ -28,7 +28,15 @@ docker compose up
 
 When the log prints `Local: http://localhost:3001/`, open the onboarding address from the `dms` log and create the administrator account. See [First run](#first-run). The DMS keeps its own data in the MongoDB that `compose.yaml` starts. The project's `.antelope` folder, uploaded files included, lives in a named Docker volume.
 
-With Docker Engine on Linux, the container runs as the user who owns the project folder, whatever its user id. The files it writes into the project, such as `dist`, `antelope-lock`, `.mcp.json`, `.codex` and the pages the Builder writes under `src`, belong to you.
+On Linux, the container runs as the user who owns the project folder, whatever its user id, with Docker Engine, rootless Docker and Docker Desktop alike. The files it writes into the project, such as `dist`, `antelope-lock`, `.mcp.json`, `.codex` and the pages the Builder writes under `src`, belong to you.
+
+To run a command in the running container, pass `-u node` so it runs as that same user:
+
+```bash
+docker compose exec -u node dms pnpm add <package>
+```
+
+Without `-u node`, `docker compose exec` runs as root, and with Docker Engine the files it writes belong to root, which the DMS cannot then rewrite.
 
 An older version of this template kept `.antelope` in the project folder. To keep the files uploaded with it, copy them into the volume once:
 
