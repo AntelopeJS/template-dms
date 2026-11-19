@@ -1,10 +1,10 @@
-<img data-illustration src="./.github/readme/starter.svg" width="100%" alt="A terminal types npx @antelopejs/core project init my-app --template dms-starter, then cd my-app and docker compose up. The DMS reports ready, then the Builder's Database tab connects your own database. Caption: Your database. Your project.">
+<img data-illustration src="./.github/readme/starter.svg" width="100%" alt="A terminal types npx @antelopejs/core project init my-app --template dms-starter, then cd my-app and docker compose up. The DMS reports ready, then the assistant's onboarding connects your own database. Caption: Your database. Your project.">
 
 <div align="center">
 
 # AntelopeJS DMS template
 
-**Start your own back office on your PostgreSQL, MongoDB or RethinkDB database, with the Builder and the AI assistant.**
+**Start your own back office on your Postgres, MySQL/MariaDB or MongoDB database, with the AI assistant or your own coding agent.**
 
 [AntelopeJS DMS](https://github.com/AntelopeJS/dms) · [Docs](https://dms.antelopejs.com/docs) · [Discord](https://discord.gg/g4pFt6eXqu)
 
@@ -12,7 +12,7 @@
 
 </div>
 
-The starting point for your own project with [AntelopeJS DMS](https://github.com/AntelopeJS/dms). It runs the DMS with the Builder and the AI assistant, and nothing else: no sample data, no demo application, no seeded database.
+The starting point for your own project with [AntelopeJS DMS](https://github.com/AntelopeJS/dms). It runs the DMS and the AI assistant, and nothing else: no sample data, no demo application, no seeded database.
 
 Want to try it on sample data first? Use [`template-dms-connect-demo`](https://github.com/AntelopeJS/template-dms-connect-demo).
 
@@ -58,7 +58,7 @@ Open that address and create the administrator account. The wizard reads the set
 
 ## Connect your own database
 
-In the assistant's onboarding popup, choose **Start from an existing database** and paste a PostgreSQL, MongoDB, or RethinkDB connection URL. The URL is saved in this project's `.env`. Access is **Read only** by default: the DMS reads the schema and the rows and writes nothing. Choose **Read and write** only if you want to edit rows from the DMS. After the analysis, untick the tables you don't need, then choose **Generate a first mockup** or **Build directly**. The assistant writes a TypeScript page for each table you keep, in this repository.
+In the assistant's onboarding popup, choose **Start from an existing database** and paste a PostgreSQL, MySQL / MariaDB, MongoDB or RethinkDB connection URL. The URL is saved in this project's `.env`. Access is **Read only** by default: the DMS reads the schema and the rows and writes nothing. Choose **Read and write** only if you want to edit rows from the DMS. After the analysis, untick the tables you don't need, then choose **Generate a first mockup** or **Build directly**. The assistant writes a TypeScript page for each table you keep, in this repository.
 
 Without Docker, use `localhost` as the host of a database on your machine. With Docker, the DMS runs in a container. Use `host.docker.internal` as the host to reach a database on your machine. To reach a database in another container, put it on the same Compose network and use its service name.
 
