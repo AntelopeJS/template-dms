@@ -15,7 +15,8 @@
     "format": "oxfmt .",
     "format:check": "oxfmt --check .",
     "knip": "knip",
-    "test": "pnpm run build",
+    "check:codex-pin": "node --no-warnings scripts/check-codex-pin.ts",
+    "test": "pnpm run build && pnpm run check:codex-pin",
     "checks": "antelopejs-checks",
     "size": "antelopejs-check-size",
     "sync": "antelopejs-sync --profile template",
@@ -30,7 +31,7 @@
     "@antelopejs/interface-database-decorators": ">=0.5.4 <0.6.0",
     "@antelopejs/interface-dms": ">=0.16.0 <0.17.0",
     "@antelopejs/interface-file-storage": ">=0.1.9 <0.2.0",
-    "@openai/codex": "0.170.0"
+    "@openai/codex": "0.166.0"
   },
   "devDependencies": {
     "@antelopejs/core": "~1.24.7",
