@@ -66,7 +66,7 @@ To try the Connect flow on a sample database first, use [`AntelopeJS/template-dm
 
 ## Build pages
 
-Pages start as a mockup. Describe what you need to the assistant, or choose **Start from scratch** in the onboarding popup, and the assistant drafts a mockup of real DMS blocks. To rework a page that already exists, press **Edit as mockup**, the pencil in the dashboard header. The mockup has two modes:
+Pages start as a mockup. Describe what you need to the assistant, or choose **Start from scratch** in the onboarding popup, and the assistant drafts a mockup of real DMS blocks. The mockup has two modes:
 
 - **Comment** mode. Click a block to leave a note on it for the assistant.
 - **Edit** mode. Add blocks from the catalog, move, duplicate, delete, and restyle them, and edit texts and pages in place.
@@ -97,12 +97,13 @@ You need git, Node.js 24, pnpm 10.33.0, and a MongoDB server. The DMS keeps its 
 - Node.js 24 is the version in `.nvmrc`.
 - pnpm 10.33.0 is the version that `packageManager` in `package.json` pins. Node.js 24 includes corepack, and `corepack enable` makes the `pnpm` command use that version.
 
-Create the project. The command installs its packages:
+Create the project and install its packages. The template's init skips the install:
 
 ```bash
 corepack enable
-npx @antelopejs/core project init my-project --template dms-starter
+npx @antelopejs/core project init my-project --template dms-starter --yes
 cd my-project
+pnpm install
 ```
 
 If you have no MongoDB on `localhost:27017`, start one. This is the only container you need:
