@@ -3,6 +3,7 @@
   "compilerOptions": {
     "types": ["node"],
     "composite": true,
+    "allowImportingTsExtensions": true,
     "emitDeclarationOnly": true,
     "rootDir": ".",
     "outDir": "node_modules/.cache/config",
