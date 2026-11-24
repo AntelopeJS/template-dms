@@ -16,7 +16,7 @@
     "format:check": "oxfmt --check .",
     "knip": "knip",
     "check:codex-pin": "node --no-warnings scripts/check-codex-pin.ts",
-    "test": "pnpm run build && pnpm run check:codex-pin",
+    "test": "pnpm run build && node --no-warnings --test scripts/*.test.ts && pnpm run check:codex-pin",
     "checks": "antelopejs-checks",
     "size": "antelopejs-check-size",
     "sync": "antelopejs-sync --profile template",

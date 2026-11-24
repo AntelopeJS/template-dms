@@ -1,5 +1,5 @@
-import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
+import { npmView } from "./npm-view.ts";
 
 const range = /"@antelopejs\/dms-assistant"[\s\S]*?version: "([^"]+)"/.exec(
   readFileSync("antelope.config.ts", "utf8"),
@@ -13,21 +13,10 @@ const pinned = /"@openai\/codex": "([^"]+)"/.exec(
   readFileSync("package.json", "utf8"),
 )?.[1];
 
-const lines = execFileSync(
-  "npm",
-  [
-    "view",
-    `@antelopejs/dms-assistant@${range}`,
-    "peerDependencies.@openai/codex",
-  ],
-  {
-    encoding: "utf8",
-    stdio: ["ignore", "pipe", "ignore"],
-    shell: process.platform === "win32",
-  },
-)
-  .trim()
-  .split("\n");
+const lines = npmView(
+  `@antelopejs/dms-assistant@${range}`,
+  "peerDependencies.@openai/codex",
+).split("\n");
 const peer = /(\d+\.\d+\.\d+[^'\s]*)'?$/.exec(
   lines[lines.length - 1] ?? "",
 )?.[1];
