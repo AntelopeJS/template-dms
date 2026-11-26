@@ -40,11 +40,11 @@ importers:
         specifier: ~1.24.8
         version: 1.24.8
       '@antelopejs/dms-frontend':
-        specifier: '>=0.11.10 <0.12.0'
-        version: 0.11.10(@antelopejs/core@1.24.8)
+        specifier: '>=0.11.11 <0.12.0'
+        version: 0.11.11(@antelopejs/core@1.24.8)
       '@antelopejs/tooling-configs':
-        specifier: '>=0.10.4 <0.11.0'
-        version: 0.10.4(knip@6.46.1)(oxfmt@0.79.0)(oxlint@1.94.0(oxlint-tsgolint@7.0.2007))(playwright-core@1.65.0)
+        specifier: '>=0.10.6 <0.11.0'
+        version: 0.10.6(knip@6.46.1)(oxfmt@0.79.0)(oxlint@1.94.0(oxlint-tsgolint@7.0.2007))(playwright-core@1.65.0)
       '@types/node':
         specifier: ^24.0.0
         version: 24.19.2
@@ -74,8 +74,8 @@ packages:
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
-  '@antelopejs/dms-frontend@0.11.10':
-    resolution: {integrity: sha512-d8yGQTruX4IyXmOigLh8Jqe1brm86QvlrvCMFnsEvqV4mJqjtXjepVraUtHfh30GVe27naorf9tEojlr35v+TA==}
+  '@antelopejs/dms-frontend@0.11.11':
+    resolution: {integrity: sha512-DNqMpvOTdfZc19WG9Uh9iW1MWDItxDHSEHos3gEXtxn7/paKH5F7SH6wyQI7mJEGK3xp7YqEz4j5qWk9Rr6HfQ==}
     engines: {node: '>=20.19.0'}
     hasBin: true
     peerDependencies:
@@ -132,8 +132,8 @@ packages:
     peerDependencies:
       '@antelopejs/interface-core': '>=0.5.1 <0.6.0'
 
-  '@antelopejs/tooling-configs@0.10.4':
-    resolution: {integrity: sha512-AXcdYORsQk67E87lmP9z4VESWnwtE/ZkJ5On+9epFyh01WiLjuAn590YltUmTtGkQV2sCKab/KIk09T8CNC3SA==}
+  '@antelopejs/tooling-configs@0.10.6':
+    resolution: {integrity: sha512-oXv2EW5cVxJd2FbMa9/WuXu0RgbwtMzqScNBkzSSP3qWhFtL1Fw8riUB3MHjAiNtrtswsvtZhCro1k+msx41sw==}
     engines: {node: '>=22.18.0'}
     hasBin: true
     peerDependencies:
@@ -1607,7 +1607,7 @@ snapshots:
       typescript: 5.9.3
       yaml: 2.9.1
 
-  '@antelopejs/dms-frontend@0.11.10(@antelopejs/core@1.24.8)':
+  '@antelopejs/dms-frontend@0.11.11(@antelopejs/core@1.24.8)':
     dependencies:
       '@antelopejs/core': 1.24.8
       '@intlify/message-compiler': 11.4.16
@@ -1672,7 +1672,7 @@ snapshots:
     dependencies:
       '@antelopejs/interface-core': 0.5.4
 
-  '@antelopejs/tooling-configs@0.10.4(knip@6.46.1)(oxfmt@0.79.0)(oxlint@1.94.0(oxlint-tsgolint@7.0.2007))(playwright-core@1.65.0)':
+  '@antelopejs/tooling-configs@0.10.6(knip@6.46.1)(oxfmt@0.79.0)(oxlint@1.94.0(oxlint-tsgolint@7.0.2007))(playwright-core@1.65.0)':
     dependencies:
       '@oxlint/plugins': 1.94.0
       dts-bundle-generator: 9.5.1
