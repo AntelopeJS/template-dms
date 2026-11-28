@@ -18,7 +18,7 @@ corepack enable
 pnpm install
 ```
 
-Node 24 (`.nvmrc`) and pnpm 10.34.9 (`packageManager` in `package.json`). `pnpm install` also installs the lefthook commit hook, which formats and lints the staged files.
+Node 24 (`.nvmrc`) and pnpm 10.34.9 (`packageManager` in `package.json`). The repo has no commit hook: run the lint and format rows yourself before you commit.
 
 ## What to run for your change
 
@@ -32,7 +32,7 @@ Node 24 (`.nvmrc`) and pnpm 10.34.9 (`packageManager` in `package.json`). `pnpm 
 | `compose.yaml` | `docker compose config -q`. It checks the file parses and resolves. No CI job builds the image or starts the stack. |
 | `Dockerfile` or `docker/*.sh` | Lint and format only. No CI job builds or runs them: say so in your pull request. |
 | `README.md` | The "Any file" row. CI checks the docs (`docs-files` in `ci.yml`). |
-| A file `antelopejs-sync` writes (`.github/workflows/ci.yml`, `lefthook.yml`, the AGENTS.md Guardrails block, `CLAUDE.md`, `.agents/setup`, the `technical-writing` and `unslop` skills) | Nothing by hand: the next sync reverts it. Bump `@antelopejs/tooling-configs`, run `pnpm run sync`, then `pnpm run sync:check`. |
+| A file `antelopejs-sync --profile template` writes (`.github/workflows/ci.yml`, `oxlint.config.ts`, `oxfmt.config.ts`, `.gitattributes`, `guardrails.suppressions.json`, the AGENTS.md Guardrails block, the entries it owns in `package.json`) | Nothing by hand: the next sync reverts it. Bump `@antelopejs/tooling-configs`, run `pnpm run sync`, then `pnpm run sync:check`. The repo stays on the template profile, so a project made from it gets no org hooks or internal skills: never switch it to the full profile. |
 
 Scope: lint and format take the files you changed. Typecheck, build and knip run on the whole project, which is small enough to run in a few seconds. No command here starts test workers.
 
